@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANgel Tapara Vergara | Ingeniero de Software con IA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+        
+        :root {
+            --primary: #00f5ff;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .heading-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(12px);
+        }
+
+        .neon-text {
+            text-shadow: 0 0 15px rgb(0 245 255);
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.03);
+            box-shadow: 0 0 30px rgba(0, 245, 255, 0.3);
+        }
+
+        .tech-pill {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-pill:hover {
+            background-color: #00f5ff;
+            color: #0a0a0a;
+            transform: translateY(-2px);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #00f5ff;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white overflow-x-hidden">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-xl bg-cyan-500 flex items-center justify-center text-black font-bold text-xl">AT</div>
+                <span class="heading-font text-2xl font-semibold tracking-tighter">Angel Tapara</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#sobre" class="nav-link text-gray-300 hover:text-white">Sobre mí</a>
+                <a href="#habilidades" class="nav-link text-gray-300 hover:text-white">Habilidades</a>
+                <a href="#proyectos" class="nav-link text-gray-300 hover:text-white">Proyectos</a>
+                <a href="#experiencia" class="nav-link text-gray-300 hover:text-white">Experiencia</a>
+                <a href="#contacto" class="nav-link text-gray-300 hover:text-white">Contacto</a>
+            </div>
+
+            <a href="#contacto" 
+               class="px-6 py-3 bg-white text-black rounded-2xl font-semibold text-sm hover:bg-cyan-400 hover:text-black transition-all flex items-center gap-2">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span>Conectar</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,#00f5ff10_0%,transparent_70%)]"></div>
+        
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm">
+                    <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                    Disponible para nuevos proyectos
+                </div>
+                
+                <h1 class="heading-font text-6xl md:text-7xl font-bold leading-none tracking-tighter neon-text">
+                    Hola, soy Angel
+                </h1>
+                
+                <p class="text-3xl text-gray-400 font-light">
+                    Ingeniero de Software 
+                </p>
+                
+                <p class="max-w-lg text-gray-400 text-lg">
+                    Creo experiencias digitales excepcionales con código limpio y diseño moderno. 
+                    Apasionado por la IA, el cloud computing y el desarrollo de productos escalables.
+                </p>
+
+                <div class="flex items-center gap-4">
+                    <a href="#proyectos" 
+                       class="px-8 py-4 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold rounded-2xl flex items-center gap-3 transition-all">
+                        Ver mis proyectos
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    
+                    <a href="#contacto" 
+                       class="px-8 py-4 border border-white/30 hover:border-cyan-400 rounded-2xl font-medium transition-all">
+                        Descargar CV
+                    </a>
+                </div>
+
+                <div class="flex gap-6 text-3xl pt-6">
+                    <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Foto / Ilustración -->
+            <div class="relative flex justify-center">
+                <div class="w-80 h-80 md:w-96 md:h-96 rounded-3xl overflow-hidden border-4 border-cyan-500/30 shadow-2xl shadow-cyan-500/20">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600" 
+                         alt="Alejandro Rivera" 
+                         class="w-full h-full object-cover">
+                </div>
+                <!-- Efecto flotante -->
+                <div class="absolute -bottom-6 -right-6 glass px-6 py-3 rounded-2xl border border-cyan-400/30 flex items-center gap-3">
+                    <div class="text-4xl">🚀</div>
+                    <div>
+                        <div class="text-sm text-gray-400">Actualmente en</div>
+                        <div class="font-semibold text-cyan-400">Desarrollo de IA Generativa</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-3xl text-cyan-400/70"></i>
+        </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre" class="py-24 bg-zinc-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold mb-12 text-center">Sobre mí</h2>
+            
+            <div class="grid md:grid-cols-12 gap-12 items-center">
+                <div class="md:col-span-7 space-y-6 text-lg text-gray-300">
+                    <p>
+                        Soy un ingeniero de software con más de 6 años de experiencia creando aplicaciones web y móviles de alto rendimiento. 
+                        Me especializo en arquitecturas escalables y en la implementación de soluciones con tecnologías modernas.
+                    </p>
+                    <p>
+                        He trabajado en startups y empresas de tecnología, liderando equipos y entregando productos que impactan a miles de usuarios.
+                        Me apasiona el aprendizaje continuo y explorar nuevas tecnologías como IA, Web3 y sistemas distribuidos.
+                    </p>
+                    <div class="pt-6 grid grid-cols-3 gap-6 text-center">
+                        <div>
+                            <div class="text-4xl font-bold text-cyan-400">50+</div>
+                            <div class="text-sm text-gray-500">Proyectos completados</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-cyan-400">12</div>
+                            <div class="text-sm text-gray-500">Clientes satisfechos</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-cyan-400">6</div>
+                            <div class="text-sm text-gray-500">Años de experiencia</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-5">
+                    <div class="glass p-8 rounded-3xl border border-white/10">
+                        <h3 class="text-xl font-semibold mb-6 flex items-center gap-3">
+                            <i class="fa-solid fa-bolt text-cyan-400"></i>
+                            Mis valores
+                        </h3>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4">
+                                <span class="text-2xl">🔍</span>
+                                <div>
+                                    <div class="font-medium">Código limpio y mantenible</div>
+                                    <div class="text-sm text-gray-500">Creo que el buen código es como una buena poesía.</div>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="text-2xl">⚡</span>
+                                <div>
+                                    <div class="font-medium">Velocidad y experiencia de usuario</div>
+                                    <div class="text-sm text-gray-500">Cada milisegundo cuenta.</div>
+                                </div>
+                            </li>
+                            <li class="flex gap-4">
+                                <span class="text-2xl">🌱</span>
+                                <div>
+                                    <div class="font-medium">Aprendizaje constante</div>
+                                    <div class="text-sm text-gray-500">Hoy mejor que ayer.</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold mb-16 text-center">Habilidades Técnicas</h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Frontend -->
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-cyan-400/50 transition-colors">
+                    <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> Frontend
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">React</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Next.js</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">TypeScript</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Tailwind</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Vue.js</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-cyan-400/50 transition-colors">
+                    <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-server"></i> Backend
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Node.js</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Python</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Go</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">NestJS</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">PostgreSQL</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-cyan-400/50 transition-colors">
+                    <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-cloud"></i> Cloud &amp; DevOps
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">AWS</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Docker</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Kubernetes</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Terraform</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- IA & Otros -->
+                <div class="glass p-8 rounded-3xl border border-white/10 hover:border-cyan-400/50 transition-colors">
+                    <h3 class="text-cyan-400 text-xl font-semibold mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-brain"></i> IA &amp; Otros
+                    </h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">LangChain</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">OpenAI</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">TensorFlow</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">GraphQL</span>
+                        <span class="tech-pill px-5 py-2 bg-white/5 text-sm rounded-2xl">Redis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos" class="py-24 bg-zinc-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold mb-4 text-center">Proyectos Destacados</h2>
+            <p class="text-center text-gray-400 mb-16 max-w-md mx-auto">Algunos de los proyectos más interesantes en los que he trabajado</p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyecto 1 -->
+                <div class="project-card glass rounded-3xl overflow-hidden border border-white/10">
+                    <div class="h-56 bg-gradient-to-br from-purple-600 to-cyan-500 flex items-center justify-center">
+                        <span class="text-6xl">📊</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-2">FinTrack AI</h3>
+                        <p class="text-gray-400 mb-6">Plataforma de finanzas personales con IA que predice gastos y optimiza presupuestos.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Next.js</span>
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Python</span>
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">OpenAI</span>
+                        </div>
+                        <a href="#" class="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium">
+                            Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 2 -->
+                <div class="project-card glass rounded-3xl overflow-hidden border border-white/10">
+                    <div class="h-56 bg-gradient-to-br from-rose-500 to-amber-500 flex items-center justify-center">
+                        <span class="text-6xl">🛒</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-2">MarketFlow</h3>
+                        <p class="text-gray-400 mb-6">E-commerce de alto rendimiento con microservicios y recomendaciones en tiempo real.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Go</span>
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Kubernetes</span>
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Redis</span>
+                        </div>
+                        <a href="#" class="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium">
+                            Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto 3 -->
+                <div class="project-card glass rounded-3xl overflow-hidden border border-white/10">
+                    <div class="h-56 bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center">
+                        <span class="text-6xl">📝</span>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-2">CollabDocs</h3>
+                        <p class="text-gray-400 mb-6">Editor colaborativo en tiempo real como Notion pero más rápido y con IA integrada.</p>
+                        <div class="flex flex-wrap gap-2 mb-8">
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">React</span>
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Yjs</span>
+                            <span class="text-xs px-3 py-1 bg-white/10 rounded-full">Supabase</span>
+                        </div>
+                        <a href="#" class="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-medium">
+                            Ver proyecto <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" class="py-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="heading-font text-5xl font-semibold mb-16 text-center">Experiencia Profesional</h2>
+            
+            <div class="space-y-12">
+                <div class="flex gap-8">
+                    <div class="w-28 text-right shrink-0">
+                        <div class="text-cyan-400 font-medium">2024 - Actual</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">Senior Software Engineer</div>
+                        <div class="text-cyan-400">Nexus Labs • Remoto</div>
+                        <ul class="mt-4 text-gray-400 list-disc list-inside space-y-2">
+                            <li>Lideré el desarrollo de una plataforma de IA generativa usada por +15k usuarios</li>
+                            <li>Reduje el tiempo de respuesta de la API en un 68%</li>
+                            <li>Mentoreé a 4 ingenieros junior</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="flex gap-8">
+                    <div class="w-28 text-right shrink-0">
+                        <div class="text-cyan-400 font-medium">2022 - 2024</div>
+                    </div>
+                    <div>
+                        <div class="font-semibold text-xl">Full Stack Developer</div>
+                        <div class="text-cyan-400">TechFlow • Madrid, España</div>
+                        <ul class="mt-4 text-gray-400 list-disc list-inside space-y-2">
+                            <li>Desarrollé sistema de pagos con Stripe y microservicios</li>
+                            <li>Implementé CI/CD con GitHub Actions y AWS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-24 bg-zinc-900">
+        <div class="max-w-3xl mx-auto px-6 text-center">
+            <h2 class="heading-font text-5xl font-semibold mb-6">¿Hablemos?</h2>
+            <p class="text-xl text-gray-400 mb-12">Estoy abierto a nuevas oportunidades y colaboraciones interesantes.</p>
+            
+            <a href="mailto:tu@email.com" 
+               class="inline-flex items-center gap-4 text-2xl font-medium border border-cyan-400 hover:bg-cyan-400 hover:text-black transition-all px-10 py-6 rounded-3xl">
+                <i class="fa-solid fa-envelope"></i>
+                tu@email.com
+            </a>
+            
+            <div class="mt-20 text-gray-500">
+                Hecho con ❤️ y mucho café • 2026
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Tailwind script ya cargado
+        // Scroll suave ya incluido con scroll-smooth
+    </script>
+</body>
+</html>
